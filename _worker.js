@@ -1,6 +1,6 @@
 const config = {
-  WebToken: 'sub',//此处修改登录密码token
-  FileName: 'Colab',MainData: '',urls: [],subconverter: "SUBAPI.fxxk.dedyn.io",subconfig: "https://raw.githubusercontent.com/cmliu/ACL4SSR/main/Clash/config/ACL4SSR_Online_MultiCountry.ini", subProtocol: 'https',
+  WebToken: 'ken',//此处修改登录密码token
+  FileName: 'Colab',MainData: '',urls: [],subconverter: "SUBAPI.fxxk.dedyn.io",subconfig: "https://raw.githubusercontent.com/rongken/clash-config-/refs/heads/main/clashconfig.ini", subProtocol: 'https',
 };
 export default {
   async fetch(request, env) {
@@ -41,7 +41,7 @@ export default {
           if (subscriptionFormat === 'clash') subconverterContent = await clashFix(subconverterContent);
           return new Response(subconverterContent, {
               headers: {
-                  "Content-Disposition": `attachment; filename*=utf-8''${encodeURIComponent(config.FileName)}; filename=${config.FileName}`,
+                  "Content-Disposition": `attachment; filename*=utf-8''${encodeURIComponent(config.FileName)}; filename=${config.FileName}`，
                   "content-type": "text/plain; charset=utf-8",
               },
           });
